@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <ThingDef Name="BuildingBase" Abstract="True">
+    <category>Building</category>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Cooler</defName>
+    <label>cooler</label>
+    <thingClass>Building_Cooler</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Misc/TempControl/CoolerB</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+    </graphicData>
+    <altitudeLayer>PawnUnused</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <blockLight>true</blockLight>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <statBases>
+      <WorkToMake>1600</WorkToMake>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <description>An electrical device that fits into a wall and pushes cold air into a room. Its exhaust port generates a lot of heat. Can be used to cool down rooms during the summer months, or to create a walk-in freezer. </description>
+    <costList>
+      <Steel>90</Steel>
+    </costList>
+    <comps>
+      <li Class="CommunityCoreLibrary.RestrictedPlacement_Properties">
+        <compClass>CommunityCoreLibrary.RestrictedPlacement_Comp</compClass>
+        <thingDefs>
+          <li>Wall</li>
+        </thingDefs>
+      </li>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <soundPowerOn>PowerOnSmall</soundPowerOn>
+        <soundPowerOff>PowerOffSmall</soundPowerOff>
+        <basePowerConsumption>200</basePowerConsumption>
+      </li>
+      <li>
+        <compClass>CompTempControl</compClass>
+        <energyPerSecond>-21</energyPerSecond>
+      </li>
+    </comps>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <placeWorkers>
+      <li>PlaceWorker_Cooler</li>
+      <li>CommunityCoreLibrary.PlaceWorker_OnlyOnThing</li>
+      <li>RedistHeat.PlaceWorker_WallChecker</li>
+    </placeWorkers>
+    <building>
+      <canPlaceOverWall>true</canPlaceOverWall>
+      <isEdifice>false</isEdifice>
+    </building>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <designationCategory>Temperature</designationCategory>
+    <designationHotKey>O</designationHotKey>
+  </ThingDef>
+
+</Defs>
