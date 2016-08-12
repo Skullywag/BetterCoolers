@@ -19,10 +19,16 @@
     <graphicData>
       <texPath>Things/Building/Misc/TempControl/CoolerB</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
     </graphicData>
     <altitudeLayer>PawnUnused</altitudeLayer>
     <passability>Impassable</passability>
-    <fillPercent>1</fillPercent>
+    <fillPercent>0.99</fillPercent>
     <coversFloor>true</coversFloor>
     <blockLight>true</blockLight>
     <castEdgeShadows>true</castEdgeShadows>
@@ -36,30 +42,30 @@
     <description>An electrical device that fits into a wall and pushes cold air into a room. Its exhaust port generates a lot of heat. Can be used to cool down rooms during the summer months, or to create a walk-in freezer. </description>
     <costList>
       <Steel>90</Steel>
+      <Component>3</Component>
     </costList>
     <comps>
-      <li Class="CommunityCoreLibrary.RestrictedPlacement_Properties">
-        <compClass>CommunityCoreLibrary.RestrictedPlacement_Comp</compClass>
+      <li Class="CommunityCoreLibrary.CompProperties_RestrictedPlacement">
+        <compClass>CommunityCoreLibrary.CompRestrictedPlacement</compClass>
         <thingDefs>
           <li>Wall</li>
         </thingDefs>
       </li>
-      <li>
+      <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <soundPowerOn>PowerOnSmall</soundPowerOn>
-        <soundPowerOff>PowerOffSmall</soundPowerOff>
         <basePowerConsumption>200</basePowerConsumption>
       </li>
-      <li>
-        <compClass>CompTempControl</compClass>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_TempControl">
         <energyPerSecond>-21</energyPerSecond>
       </li>
+      <li Class="CompProperties_Breakdownable"/>
     </comps>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <placeWorkers>
       <li>PlaceWorker_Cooler</li>
       <li>CommunityCoreLibrary.PlaceWorker_OnlyOnThing</li>
-      <li>RedistHeat.PlaceWorker_WallChecker</li>
+      <li>BetterCoolers.PlaceWorker_OnWall</li>
     </placeWorkers>
     <building>
       <canPlaceOverWall>true</canPlaceOverWall>
@@ -67,7 +73,10 @@
     </building>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <designationCategory>Temperature</designationCategory>
-    <designationHotKey>O</designationHotKey>
+    <designationHotKey>Misc3</designationHotKey>
+    <researchPrerequisites>
+      <li>AirConditioning</li>
+    </researchPrerequisites>
   </ThingDef>
 
 </Defs>

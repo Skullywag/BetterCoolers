@@ -1,0 +1,10 @@
+C:\Users\mjsku\Desktop\RimWorldAlpha14eWin\RimWorld1249Win\Mods\BetterCoolers\Source\BetterCoolers\bin\Debug\BetterCoolers.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha14eWin\RimWorld1249Win\Mods\BetterCoolers\Source\BetterCoolers\bin\Debug\BetterCoolers.pdb
+C:\Users\mjsku\Desktop\RimWorldAlpha14eWin\RimWorld1249Win\Mods\BetterCoolers\Source\BetterCoolers\bin\Debug\Assembly-CSharp.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha14eWin\RimWorld1249Win\Mods\BetterCoolers\Source\BetterCoolers\bin\Debug\UnityEngine.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha14eWin\RimWorld1249Win\Mods\BetterCoolers\Source\BetterCoolers\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha14eWin\RimWorld1249Win\Mods\BetterCoolers\Source\BetterCoolers\bin\Debug\NAudio.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha14eWin\RimWorld1249Win\Mods\BetterCoolers\Source\BetterCoolers\bin\Debug\NVorbis.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha14eWin\RimWorld1249Win\Mods\BetterCoolers\Source\BetterCoolers\obj\Debug\BetterCoolers.csprojResolveAssemblyReference.cache
+C:\Users\mjsku\Desktop\RimWorldAlpha14eWin\RimWorld1249Win\Mods\BetterCoolers\Source\BetterCoolers\obj\Debug\BetterCoolers.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha14eWin\RimWorld1249Win\Mods\BetterCoolers\Source\BetterCoolers\obj\Debug\BetterCoolers.pdb
