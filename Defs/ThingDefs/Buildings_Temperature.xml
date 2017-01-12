@@ -34,7 +34,7 @@
     <castEdgeShadows>true</castEdgeShadows>
     <staticSunShadowHeight>1.0</staticSunShadowHeight>
     <statBases>
-      <WorkToMake>1600</WorkToMake>
+      <WorkToBuild>1600</WorkToBuild>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
@@ -45,12 +45,6 @@
       <Component>3</Component>
     </costList>
     <comps>
-      <li Class="CommunityCoreLibrary.CompProperties_RestrictedPlacement">
-        <compClass>CommunityCoreLibrary.CompRestrictedPlacement</compClass>
-        <thingDefs>
-          <li>Wall</li>
-        </thingDefs>
-      </li>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>200</basePowerConsumption>
@@ -64,7 +58,6 @@
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <placeWorkers>
       <li>PlaceWorker_Cooler</li>
-      <li>CommunityCoreLibrary.PlaceWorker_OnlyOnThing</li>
       <li>BetterCoolers.PlaceWorker_OnWall</li>
     </placeWorkers>
     <building>
