@@ -29,3 +29,14 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\BetterCoolers-A16\So
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\BetterCoolers-A16\Source\BetterCoolers\obj\Debug\BetterCoolers.csprojResolveAssemblyReference.cache
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\BetterCoolers-A16\Source\BetterCoolers\obj\Debug\BetterCoolers.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\BetterCoolers-A16\Source\BetterCoolers\obj\Debug\BetterCoolers.pdb
+C:\Users\mjsku\Desktop\RimWorldAlpha17bWin\RimWorld1557Win\Mods\BetterCoolers\Source\BetterCoolers\bin\Debug\BetterCoolers.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha17bWin\RimWorld1557Win\Mods\BetterCoolers\Source\BetterCoolers\bin\Debug\BetterCoolers.pdb
+C:\Users\mjsku\Desktop\RimWorldAlpha17bWin\RimWorld1557Win\Mods\BetterCoolers\Source\BetterCoolers\bin\Debug\Assembly-CSharp.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha17bWin\RimWorld1557Win\Mods\BetterCoolers\Source\BetterCoolers\bin\Debug\UnityEngine.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha17bWin\RimWorld1557Win\Mods\BetterCoolers\Source\BetterCoolers\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha17bWin\RimWorld1557Win\Mods\BetterCoolers\Source\BetterCoolers\bin\Debug\NAudio.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha17bWin\RimWorld1557Win\Mods\BetterCoolers\Source\BetterCoolers\bin\Debug\NVorbis.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha17bWin\RimWorld1557Win\Mods\BetterCoolers\Source\BetterCoolers\bin\Debug\UnityEngine.xml
+C:\Users\mjsku\Desktop\RimWorldAlpha17bWin\RimWorld1557Win\Mods\BetterCoolers\Source\BetterCoolers\obj\Debug\BetterCoolers.csprojResolveAssemblyReference.cache
+C:\Users\mjsku\Desktop\RimWorldAlpha17bWin\RimWorld1557Win\Mods\BetterCoolers\Source\BetterCoolers\obj\Debug\BetterCoolers.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha17bWin\RimWorld1557Win\Mods\BetterCoolers\Source\BetterCoolers\obj\Debug\BetterCoolers.pdb
