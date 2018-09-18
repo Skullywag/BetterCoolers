@@ -1,3 +1,6 @@
 E:\Rimworld\My Mods\1.0U\Mods\BetterCoolers\Assemblies\BetterCoolers.dll
 E:\Rimworld\My Mods\1.0U\Mods\BetterCoolers\Source\BetterCoolers\obj\Debug\BetterCoolers.csprojResolveAssemblyReference.cache
 E:\Rimworld\My Mods\1.0U\Mods\BetterCoolers\Source\BetterCoolers\obj\Debug\BetterCoolers.dll
+E:\Rimworld\My Mods\B19\Mods\BetterCoolers\Assemblies\BetterCoolers.dll
+E:\Rimworld\My Mods\B19\Mods\BetterCoolers\Source\BetterCoolers\obj\Debug\BetterCoolers.csprojResolveAssemblyReference.cache
+E:\Rimworld\My Mods\B19\Mods\BetterCoolers\Source\BetterCoolers\obj\Debug\BetterCoolers.dll

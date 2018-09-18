@@ -58,7 +58,7 @@
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <placeWorkers>
       <li>PlaceWorker_Cooler</li>
-      <li>BetterCoolers.PlaceWorker_OnWall</li>
+      <li>BetterCV.PlaceWorker_OnWall</li>
     </placeWorkers>
     <building>
       <canPlaceOverWall>true</canPlaceOverWall>
@@ -71,5 +71,4 @@
       <li>AirConditioning</li>
     </researchPrerequisites>
   </ThingDef>
-
 </Defs>

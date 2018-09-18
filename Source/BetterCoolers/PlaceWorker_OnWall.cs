@@ -1,6 +1,6 @@
 ﻿using Verse;
 
-namespace BetterCoolers
+namespace BetterCV
 {
 
     public class PlaceWorker_OnWall : PlaceWorker
