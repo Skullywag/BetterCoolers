@@ -42,11 +42,10 @@ namespace BetterCV {
 			if (thingDef2 != null && t.def.graphicData != null) {
 
 				//modified wall check code to use the same logic as PlaceWorker_OnWall
-				if ((t.def.graphicData.linkFlags & (LinkFlags.Wall)) != 0 && thingDef2.building != null && thingDef2.building.canPlaceOverWall) {
+				if (((t.def.graphicData.linkFlags & (LinkFlags.Wall)) != 0 || t.def.IsSmoothed) && thingDef2.building != null && thingDef2.building.canPlaceOverWall) {
 					__result = false;
 				}
 			}
-			Log.Message("BlocksConstruction " + __result);
 		}
 	}
 
@@ -65,7 +64,6 @@ namespace BetterCV {
 					__result = true;
 				}
 			}
-			Log.Message("CanPlaceBlueprintOver " + __result);
 		}
 	}
 
@@ -83,7 +81,6 @@ namespace BetterCV {
 			if (thingDef2.graphicData != null && ((thingDef2.graphicData.linkFlags & (LinkFlags.Wall)) != 0 || thingDef2.IsSmoothed) && thingDef.building != null && thingDef.building.canPlaceOverWall) {
 				__result = false;
 			}
-			Log.Message("SpawningWipes " + __result);
 		}
 	}
 }

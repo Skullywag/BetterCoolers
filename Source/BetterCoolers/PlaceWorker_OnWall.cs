@@ -16,13 +16,20 @@ namespace BetterCV
                 return (AcceptanceReport)("MessagePlacementOnSupport".Translate());
             }
 
-            if (
-                (support.def == null) ||
-                (support.def.graphicData == null)
-            )
-            {
+            if (support.def == null)
+			{
                 return (AcceptanceReport)("MessagePlacementOnSupport".Translate());
             }
+
+			if (support.def.IsSmoothed)
+			{
+				return AcceptanceReport.WasAccepted;
+			}
+
+			if (support.def.graphicData == null)
+			{
+				return (AcceptanceReport)("MessagePlacementOnSupport".Translate());
+			}
 
             return (support.def.graphicData.linkFlags & (LinkFlags.Wall)) != 0
                 ? AcceptanceReport.WasAccepted
