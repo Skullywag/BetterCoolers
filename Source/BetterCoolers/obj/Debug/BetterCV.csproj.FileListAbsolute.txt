@@ -1,3 +1,8 @@
 E:\Rimworld\My Mods\B19\Mods\BetterCoolers\Source\BetterCoolers\obj\Debug\BetterCV.csprojResolveAssemblyReference.cache
 E:\Rimworld\My Mods\B19\Mods\BetterCoolers\Assemblies\BetterCV.dll
 E:\Rimworld\My Mods\B19\Mods\BetterCoolers\Source\BetterCoolers\obj\Debug\BetterCV.dll
+E:\Rimworld\My Mods\1.0\RimWorld2059Win64\Mods\BetterCoolers\Assemblies\BetterCV.dll
+E:\Rimworld\My Mods\1.0\RimWorld2059Win64\Mods\BetterCoolers\Source\BetterCoolers\obj\Debug\BetterCV.csprojAssemblyReference.cache
+E:\Rimworld\My Mods\1.0\RimWorld2059Win64\Mods\BetterCoolers\Source\BetterCoolers\obj\Debug\BetterCV.csproj.CoreCompileInputs.cache
+E:\Rimworld\My Mods\1.0\RimWorld2059Win64\Mods\BetterCoolers\Source\BetterCoolers\obj\Debug\BetterCV.csproj.CopyComplete
+E:\Rimworld\My Mods\1.0\RimWorld2059Win64\Mods\BetterCoolers\Source\BetterCoolers\obj\Debug\BetterCV.dll
