@@ -55,7 +55,7 @@
       </li>
       <li Class="CompProperties_Breakdownable"/>
     </comps>
-    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <placeWorkers>
       <li>PlaceWorker_Cooler</li>
       <li>BetterCV.PlaceWorker_OnWall</li>

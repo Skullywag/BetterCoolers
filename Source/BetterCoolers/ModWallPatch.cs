@@ -1,14 +1,14 @@
 ﻿using System.Reflection;
 using RimWorld;
 using Verse;
-using Harmony;
+using HarmonyLib;
 using UnityEngine;
 
 namespace BetterCV {
 	[StaticConstructorOnStartup]
 	public static class ModWallPatch {
 		static ModWallPatch() {
-			var harmony = HarmonyInstance.Create("BetterCV");
+			var harmony = new Harmony("BetterCV");
 			harmony.PatchAll(Assembly.GetExecutingAssembly());
 		}
 	}
