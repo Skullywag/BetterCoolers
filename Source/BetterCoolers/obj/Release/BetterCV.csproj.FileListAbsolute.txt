@@ -1,5 +1,4 @@
 E:\Rimworld\My Mods\1.1\RimWorld1-1-2575Win64\Mods\BetterCoolers\Source\BetterCoolers\obj\Release\BetterCV.csprojAssemblyReference.cache
 E:\Rimworld\My Mods\1.1\RimWorld1-1-2575Win64\Mods\BetterCoolers\Source\BetterCoolers\obj\Release\BetterCV.csproj.CoreCompileInputs.cache
 E:\Rimworld\My Mods\1.1\RimWorld1-1-2575Win64\Mods\BetterCoolers\1.1\Assemblies\BetterCV.dll
-E:\Rimworld\My Mods\1.1\RimWorld1-1-2575Win64\Mods\BetterCoolers\Source\BetterCoolers\obj\Release\BetterCV.csproj.CopyComplete
 E:\Rimworld\My Mods\1.1\RimWorld1-1-2575Win64\Mods\BetterCoolers\Source\BetterCoolers\obj\Release\BetterCV.dll
