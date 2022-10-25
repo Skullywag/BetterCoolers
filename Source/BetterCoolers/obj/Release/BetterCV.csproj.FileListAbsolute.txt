@@ -10,3 +10,7 @@ H:\Rimworld\RimWorld1-3-3072Win64\Mods\BetterCoolers\1.3\Assemblies\BetterCV.dll
 H:\Rimworld\RimWorld1-3-3072Win64\Mods\BetterCoolers\Source\BetterCoolers\obj\Release\BetterCV.csprojAssemblyReference.cache
 H:\Rimworld\RimWorld1-3-3072Win64\Mods\BetterCoolers\Source\BetterCoolers\obj\Release\BetterCV.csproj.CoreCompileInputs.cache
 H:\Rimworld\RimWorld1-3-3072Win64\Mods\BetterCoolers\Source\BetterCoolers\obj\Release\BetterCV.dll
+H:\Rimworld\My Mods\Git\BetterCoolers\1.4\Assemblies\BetterCV.dll
+H:\Rimworld\My Mods\Git\BetterCoolers\Source\BetterCoolers\obj\Release\BetterCV.csproj.AssemblyReference.cache
+H:\Rimworld\My Mods\Git\BetterCoolers\Source\BetterCoolers\obj\Release\BetterCV.csproj.CoreCompileInputs.cache
+H:\Rimworld\My Mods\Git\BetterCoolers\Source\BetterCoolers\obj\Release\BetterCV.dll

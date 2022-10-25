@@ -7,11 +7,36 @@ using UnityEngine;
 namespace BetterCV {
 	[StaticConstructorOnStartup]
 	public static class ModWallPatch {
-		static ModWallPatch() {
-			var harmony = new Harmony("BetterCV");
-			harmony.PatchAll(Assembly.GetExecutingAssembly());
+        static ModWallPatch() {
+            var harmony = new Harmony("BetterCV");
+            harmony.PatchAll(Assembly.GetExecutingAssembly());
 		}
-	}
+		
+    }
+
+    public static class BetterCVUtil {
+		public static bool isWall(BuildableDef bDef) {
+			ThingDef def = bDef as ThingDef;
+			if (def == null) return false;
+
+			return (def.graphicData != null && ((def.graphicData.linkFlags & (LinkFlags.Wall)) != 0 || def.IsSmoothed));
+        }
+		public static bool isOverWall(BuildableDef bDef) {
+			ThingDef def = bDef as ThingDef;
+			if (def == null) return false;
+			if (def.building == null) return false;
+			if (bDef.PlaceWorkers == null) return false;
+			
+			bool isOnWall = false;
+			foreach (PlaceWorker p in bDef.PlaceWorkers) {
+				Log.Message(p.ToString());
+				if (p is PlaceWorker_OnWall) {
+					isOnWall = true;
+				}
+			}
+			return isOnWall && def.building.canPlaceOverWall;
+		}
+    }
 
 	//Patches to:
 	//Rimworld.GenConstruct.BlocksConstruction
@@ -26,26 +51,22 @@ namespace BetterCV {
 		public static void _Postfix(Thing constructible, Thing t,ref bool __result) {
 
 			//if our check wouldn't make any difference, don't bother.
-			//if (!__result) return;
+			if (!__result) return;
 
-			ThingDef thingDef;
-			if (constructible is Blueprint) {
-				thingDef = constructible.def;
-			}
-			else if (constructible is Frame) {
-				thingDef = constructible.def.entityDefToBuild.blueprintDef;
-			}
-			else {
-				thingDef = constructible.def.blueprintDef;
-			}
-			ThingDef thingDef2 = thingDef.entityDefToBuild as ThingDef;
-			if (thingDef2 != null && t.def.graphicData != null) {
+			//convert constructible (incase it's a frame or blueprint, through entityDefToBuild
+			BuildableDef cDef = constructible.def.entityDefToBuild;
+			if (cDef == null) {
+				cDef = constructible.def;
+            }
+			BuildableDef tDef = t.def.entityDefToBuild;
+			if (tDef == null) {
+				tDef = t.def;
+            }
 
-				//modified wall check code to use the same logic as PlaceWorker_OnWall
-				if (((t.def.graphicData.linkFlags & (LinkFlags.Wall)) != 0 || t.def.IsSmoothed) && thingDef2.building != null && thingDef2.building.canPlaceOverWall) {
-					__result = false;
-				}
-			}
+			//check both ways for over/under
+			if ((BetterCVUtil.isOverWall(cDef) && BetterCVUtil.isWall(tDef)) || (BetterCVUtil.isOverWall(tDef) && BetterCVUtil.isWall(cDef))) {
+				__result = false;
+            }
 		}
 	}
 
@@ -53,16 +74,11 @@ namespace BetterCV {
 	public static class CanPlaceBlueprintOver {
 		[HarmonyPostfix]
 		public static void _Postfix(BuildableDef newDef, ThingDef oldDef,ref bool __result) {
-			//if (__result) return;
+			if (__result) return;
 
-			ThingDef thingDef = newDef as ThingDef;
-			BuildableDef buildableDef = GenConstruct.BuiltDefOf(oldDef);
-			ThingDef thingDef2 = buildableDef as ThingDef;
-
-			if (thingDef != null) {
-				if (thingDef2 != null && thingDef2.graphicData != null && ((thingDef2.graphicData.linkFlags & (LinkFlags.Wall)) != 0 || thingDef2.IsSmoothed) && thingDef.building != null && thingDef.building.canPlaceOverWall) {
-					__result = true;
-				}
+			//check both ways for over/under
+			if ((BetterCVUtil.isOverWall(newDef) && BetterCVUtil.isWall(GenConstruct.BuiltDefOf(oldDef))) || (BetterCVUtil.isOverWall(GenConstruct.BuiltDefOf(oldDef)) && BetterCVUtil.isWall(newDef))) {
+				__result = true;
 			}
 		}
 	}
@@ -71,14 +87,15 @@ namespace BetterCV {
 	public static class SpawningWipes {
 		[HarmonyPostfix]
 		public static void _Postfix(BuildableDef newEntDef, BuildableDef oldEntDef,ref bool __result) {
-			//if (__result) return;
-
-			ThingDef thingDef = newEntDef as ThingDef;
-			ThingDef thingDef2 = oldEntDef as ThingDef;
+			if (!__result) return;
+			
+			BuildableDef thingDef = GenConstruct.BuiltDefOf(newEntDef as ThingDef);
+			BuildableDef thingDef2 = GenConstruct.BuiltDefOf(oldEntDef as ThingDef);
 			if (thingDef == null || thingDef2 == null) {
 				return;
 			}
-			if (thingDef2.graphicData != null && ((thingDef2.graphicData.linkFlags & (LinkFlags.Wall)) != 0 || thingDef2.IsSmoothed) && thingDef.building != null && thingDef.building.canPlaceOverWall) {
+			
+			if ((BetterCVUtil.isOverWall(thingDef) && BetterCVUtil.isWall(thingDef2)) || (BetterCVUtil.isOverWall(thingDef2) && BetterCVUtil.isWall(thingDef))) {
 				__result = false;
 			}
 		}
